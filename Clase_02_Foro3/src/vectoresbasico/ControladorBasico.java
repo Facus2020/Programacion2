@@ -88,7 +88,7 @@ public class ControladorBasico {
 			
 			if (opciones == 5) {
 				
-				System.out.println("Gracias por utililizar este Menu - Vuelva prontos");
+				System.out.println("Gracias por utililizar este Menu - Vuelva Prontos");
 				break;
 				
 			}
