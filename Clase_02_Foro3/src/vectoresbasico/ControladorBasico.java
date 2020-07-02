@@ -35,7 +35,7 @@ public class ControladorBasico {
 		int opciones;
 		
 		do {
-			System.out.println("MENU PRINCIPAL");
+			System.out.println("------MENU PRINCIPAL------");
 			System.out.println("..........................");
 			System.out.println("Elija una opción numérica:");
 			System.out.println("..........................");
