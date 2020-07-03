@@ -56,9 +56,10 @@ public class ControladorBasico {
 				
 				System.out.println("Escriba la posición donde quiere guardar el nombre: ");
 				int posicionnueva = Leer.nextInt();
-								
+				
+				miLibreta.corroborarNombre(nombrenuevo);				
 				miLibreta.agregarAlibreta(nombrenuevo, posicionnueva);
-				miLibreta.corroborarNombre(nombrenuevo);
+				
 				miLibreta.listarLibreta();					
 			}
 			

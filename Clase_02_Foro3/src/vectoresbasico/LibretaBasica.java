@@ -39,8 +39,9 @@ public class LibretaBasica {
             	
             if (bandera == true) {
             			
-            			System.out.println("Lo siento. El usuario ya está registrado"); 
-            				
+            			System.out.println("LO SIENTO. USUARIO YA REGISTRADO"); 
+            			System.out.println("................................");
+            			
             			} 
             return bandera;
 			}
