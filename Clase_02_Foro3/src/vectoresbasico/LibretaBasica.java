@@ -8,12 +8,13 @@ public class LibretaBasica {
 	
 	public void agregarAlibreta(String nom, int lugar) {
 		
-		this.nombres[lugar] = nom;
-			
+		this.nombres[lugar] = nom;			
+				
 	//creo bucle for para recorrer el array
 			for(int i=0; i<nombres.length; i++) {
 				
-				//si es igual pasa a este if donde comprueba la posicion 
+				
+						//si es igual pasa a este if donde comprueba la posicion 
 						if (nombres[i] == null) {
 							
 							//y si es igual no la imprime
@@ -21,8 +22,30 @@ public class LibretaBasica {
 						}
 			}
 	}	
-	
-		
+			public boolean corroborarNombre(String nombrenuevo) {									
+				
+				// TODO Auto-generated method stub
+			//Hacemos la comprobación en el vector por el usuario   
+            boolean bandera = false;
+            
+            for (int i=0; i<nombres.length; i++) {
+            	            	 
+				//si es igual pasa a este if donde comprueba la posicion 
+					if (nombrenuevo.equals(nombres[i])) {
+						
+						bandera = true;       	
+					}	
+			}
+            	
+            if (bandera == true) {
+            			
+            			System.out.println("Lo siento. El usuario ya está registrado"); 
+            				
+            			} 
+            return bandera;
+			}
+	      	 
+	      	
 	public void nombreAremover(String nombreaeliminar) {
 		// TODO Auto-generated method stub
 		
@@ -30,7 +53,7 @@ public class LibretaBasica {
 			
 				if(nombres[i].equals(nombreaeliminar)) {
 				
-					nombres[i] = null;
+					nombres[i] = "Nombre Eliminado";
 			}
 		}	
 	
@@ -60,8 +83,12 @@ public class LibretaBasica {
 		for(int i=0;i<nombres.length;i++) {
 							
 			System.out.println("Vector " + i + " se ubica en la posición " + (i+1) + "-->" + nombres[i]);
+			
 		}
+		
+		System.out.println("......................................................................");
 	}
+	
 
 
 	

@@ -45,24 +45,26 @@ public class ControladorBasico {
 			System.out.println("3. Eliminar una posición");
 			System.out.println("4. Mostrar la libreta básica");
 			System.out.println("5. Salida");
+			System.out.println("..........................");
 			
 			opciones = Leer.nextInt();
 			
 			if (opciones == 1) {
 				
-				System.out.println("Escribir el nombre");
+				System.out.println("Escriba el nombre que quiere agregar: ");
 				String nombrenuevo = Leer.next();
 				
-				System.out.println("Escribir la posición donde guardar el nombre");
+				System.out.println("Escriba la posición donde quiere guardar el nombre: ");
 				int posicionnueva = Leer.nextInt();
-				
+								
 				miLibreta.agregarAlibreta(nombrenuevo, posicionnueva);
+				miLibreta.corroborarNombre(nombrenuevo);
 				miLibreta.listarLibreta();					
 			}
 			
 			if (opciones == 2) {
 				
-				System.out.println("Escribir el Nombre que quiere eliminar");
+				System.out.println("Escriba el nombre que quiere eliminar: ");
 				String nombreaeliminar = Leer.next();
 				
 				miLibreta.nombreAremover(nombreaeliminar);
@@ -71,7 +73,7 @@ public class ControladorBasico {
 			
 			if (opciones == 3) {
 				
-				System.out.println("Escribir la posición que quiere eliminar");
+				System.out.println("Escriba la posición que quiere eliminar: ");
 				int posicionaeliminar = Leer.nextInt();
 				
 				miLibreta.posicionAremover(posicionaeliminar);
