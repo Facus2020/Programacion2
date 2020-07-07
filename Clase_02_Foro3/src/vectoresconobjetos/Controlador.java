@@ -15,13 +15,13 @@ public class Controlador {
 		miLibretita.listarLibreta();
 		miLibretita.agregarAlibreta("Osvaldo");
 		miLibretita.listarLibreta();
-		miLibretita.agregarAlibreta("Juan Pablo");
+		miLibretita.agregarAlibreta("Juampi");
 		miLibretita.listarLibreta();
 		miLibretita.agregarAlibreta("Emir");
 		miLibretita.listarLibreta();
 		miLibretita.agregarAlibreta("Matias");
 		miLibretita.listarLibreta();
-		miLibretita.agregarAlibreta("Victor HP");
+		miLibretita.agregarAlibreta("Victor");
 		miLibretita.listarLibreta();
 		miLibretita.agregarAlibreta("Gonzalo");
 		miLibretita.listarLibreta();
@@ -56,10 +56,12 @@ public class Controlador {
 				
 				System.out.println("Escriba la posición donde quiere guardar el nombre: ");
 				int posicionnueva = Leer.nextInt();
-				
+												
 				miLibretita.corroborarNombre(nombrenuevo);
-				miLibretita.quedaLugar(nombrenuevo);				
-				miLibretita.agregarAlibreta(nombrenuevo);				
+				miLibretita.posicionProhibida(posicionnueva);
+				miLibretita.quedaLugar(nombrenuevo);	
+				miLibretita.espacioTotal(posicionnueva);
+				miLibretita.agregarAlibreta(nombrenuevo);					
 				miLibretita.listarLibreta();					
 			}
 			

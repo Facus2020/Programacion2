@@ -36,6 +36,54 @@ public class Libreta {
     			} 
     return bandera;
 	}
+	
+	public boolean posicionProhibida(int lugares) {									
+		
+		// TODO Auto-generated method stub
+	//Hacemos la comprobación en el vector por el usuario   
+    boolean bandera1 = false;
+    
+    for (int i=0; i<cantidadRegistros; i++) {
+    	            	 
+		//si es igual pasa a este if donde comprueba la posicion 
+			if (lugares > cantidadRegistros) {
+				
+				bandera1 = true;       	
+			}	
+	}
+    	
+    if (bandera1 == true) {
+    			
+    			System.out.println("LO SIENTO. POSICIÓN PROHIBIDA"); 
+    			System.out.println("................................");
+    			
+    			} 
+    return bandera1;
+    }
+	
+	public boolean espacioTotal(int lugares1) {									
+		
+		// TODO Auto-generated method stub
+	//Hacemos la comprobación en el vector por el usuario   
+    boolean bandera2 = false;
+    
+    for (int i=0; i<cantidadRegistros; i++) {
+    	            	 
+		//si es igual pasa a este if donde comprueba la posicion 
+			if (lugares1 > cantidadRegistros) {
+				
+				bandera2 = true;       	
+			}	
+	}
+    	
+    if (bandera2 == true) {
+    			
+    			System.out.println("LO SIENTO. AGENDA LLENA"); 
+    			System.out.println("................................");
+    			
+    			} 
+    return bandera2;
+    }
 	public boolean quedaLugar(String nombrenuevo) {
 		//System.out.println("--quedaLugar() -->[Libreta]");	
  
@@ -51,6 +99,7 @@ public class Libreta {
 		
 		//System.out.println("<--respuesta "+respuesta+" --[Libreta]");
 		return respuesta;
+		
 	}
 	
 	public boolean agregarAlibreta(String nom) {
@@ -68,6 +117,7 @@ public class Libreta {
 		//System.out.println("<--bool lugar --[Libreta]");		
 		return lugar;
 	}
+	
 	
 	public void posicionAremover(int posicionaeliminar) {
 		// TODO Auto-generated method stub
@@ -103,12 +153,11 @@ public class Libreta {
 	public void listarLibreta() {
 		//System.out.println("--listarLibreta() -->[Libreta]");
 		for(int i=0;i<cantidadRegistros;i++) {
-			System.out.println("Valor " + i + " posición " + (i+1) + "-->" + nombres[i]);
+			System.out.println("Valor " + (i+1) + " posición " + (i) + "-->" + nombres[i]);
 		}
 	}
 
 	
-
 }
 
 
