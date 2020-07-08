@@ -12,44 +12,47 @@ public class Controlador {
 		Libreta miLibretita = new Libreta(10);
  		
 		miLibretita.agregarAlibreta("Daniela");
-		miLibretita.listarLibreta();
+		//miLibretita.listarLibreta();
 		miLibretita.agregarAlibreta("Osvaldo");
-		miLibretita.listarLibreta();
+		//miLibretita.listarLibreta();
 		miLibretita.agregarAlibreta("Juampi");
-		miLibretita.listarLibreta();
+		//miLibretita.listarLibreta();
 		miLibretita.agregarAlibreta("Emir");
-		miLibretita.listarLibreta();
+		//miLibretita.listarLibreta();
 		miLibretita.agregarAlibreta("Matias");
-		miLibretita.listarLibreta();
+		//miLibretita.listarLibreta();
 		miLibretita.agregarAlibreta("Victor");
-		miLibretita.listarLibreta();
+		//miLibretita.listarLibreta();
 		miLibretita.agregarAlibreta("Gonzalo");
-		miLibretita.listarLibreta();
+		//miLibretita.listarLibreta();
 		miLibretita.agregarAlibreta("Facundo");
-		miLibretita.listarLibreta();
+		//miLibretita.listarLibreta();
 		miLibretita.agregarAlibreta("Daiana");
-		miLibretita.listarLibreta();
+		//miLibretita.listarLibreta();
 		miLibretita.agregarAlibreta("Junior");
-		miLibretita.listarLibreta();
+		//miLibretita.listarLibreta();
 		
 		int opciones;
 		
 		do {
-			System.out.println("------MENU PRINCIPAL------");
-			System.out.println("..........................");
-			System.out.println("Elija una opción numérica:");
-			System.out.println("..........................");
+			System.out.println("------------MENU PRINCIPAL------------");
+			System.out.println("......................................");
+			System.out.println("-----Elija una opción numérica:-------");
+			System.out.println("......................................");
 			
 			System.out.println("1. ¿Qué nombre desea agregar?");
 			System.out.println("2. ¿Qué posición desea eliminar?");
-			System.out.println("3. ¿Qué nombre desea eliminar posición");
-			System.out.println("4. Mostrar la libreta básica");
-			System.out.println("5. Salida");
-			System.out.println("..........................");
+			System.out.println("3. ¿Qué nombre desea eliminar?");
+			System.out.println("4. Mostrar la libreta");
+			System.out.println("5. Mostrar los lugares libres");
+			System.out.println("6. Salida");
+			System.out.println("......................................");
 			
 			opciones = Leer.nextInt();
 									
 			if (opciones == 1) {
+				
+				if (miLibretita.posicionesLibres() > 0) {
 				
 				System.out.println("Escriba el nombre que quiere agregar: ");
 				String nombrenuevo = Leer.next();
@@ -57,14 +60,14 @@ public class Controlador {
 				System.out.println("Escriba la posición donde quiere guardar el nombre: ");
 				int posicionnueva = Leer.nextInt();
 												
-				miLibretita.corroborarNombre(nombrenuevo);
-				miLibretita.posicionProhibida(posicionnueva);
-				miLibretita.quedaLugar(nombrenuevo);	
-				miLibretita.espacioTotal(posicionnueva);
-				miLibretita.agregarAlibreta(nombrenuevo);					
+				boolean bandera = miLibretita.corroborarNombre(nombrenuevo);
+					if (! bandera) {
+						miLibretita.agregarAlibreta(nombrenuevo);
+					}
+				miLibretita.posicionProhibida(posicionnueva);										
 				miLibretita.listarLibreta();					
+				}
 			}
-			
 			if (opciones == 2) {
 				
 				System.out.println("Escriba la posición que quiere eliminar: ");
@@ -93,11 +96,16 @@ public class Controlador {
 			
 			if (opciones == 5) {
 				
-				System.out.println("Gracias por utililizar este Menu - Vuelva Prontos");
+				System.out.println("Los lugares libres que quedan son: " + miLibretita.posicionesLibres());
+								
+			}
+			
+			if (opciones == 6) {
+				
+				System.out.println("Hasta luegos - Vuelva Prontos");
 				break;
 				
 			}
-			
 		} while (opciones != 0);
 				
 		

@@ -13,6 +13,20 @@ public class Libreta {
 		
 	}
 
+	public int posicionesLibres() {
+		// TODO Auto-generated method stub
+		int lugaresLibres = 0;
+		
+			for(int i=0; i<nombres.length; i++) {
+			
+				if(nombres[i] == null) {
+				
+					lugaresLibres = lugaresLibres +1;
+			}
+		}	
+			return lugaresLibres;
+	}
+	
 	public boolean corroborarNombre(String nombrenuevo) {									
 		
 		// TODO Auto-generated method stub
@@ -60,30 +74,7 @@ public class Libreta {
     			} 
     return bandera1;
     }
-	
-	public boolean espacioTotal(int lugares1) {									
 		
-		// TODO Auto-generated method stub
-	//Hacemos la comprobación en el vector por el usuario   
-    boolean bandera2 = false;
-    
-    for (int i=0; i<cantidadRegistros; i++) {
-    	            	 
-		//si es igual pasa a este if donde comprueba la posicion 
-			if (lugares1 > cantidadRegistros) {
-				
-				bandera2 = true;       	
-			}	
-	}
-    	
-    if (bandera2 == true) {
-    			
-    			System.out.println("LO SIENTO. AGENDA LLENA"); 
-    			System.out.println("................................");
-    			
-    			} 
-    return bandera2;
-    }
 	public boolean quedaLugar(String nombrenuevo) {
 		//System.out.println("--quedaLugar() -->[Libreta]");	
  
@@ -131,7 +122,7 @@ public class Libreta {
 				if(j1 == posicionaeliminar) {
 					
 					//y si es igual no la imprime
-						nombres[j1] = "Posición eliminada";
+						nombres[j1] = null;
 					
 				}
 			}		
@@ -145,15 +136,21 @@ public class Libreta {
 			
 				if(nombres[i].equals(nombreaeliminar)) {
 				
-					nombres[i] = "Nombre Eliminado";
+					nombres[i] = null;
 			}
 		}	
 	
 	}
 	public void listarLibreta() {
 		//System.out.println("--listarLibreta() -->[Libreta]");
-		for(int i=0;i<cantidadRegistros;i++) {
-			System.out.println("Valor " + (i+1) + " posición " + (i) + "-->" + nombres[i]);
+		for(int i=1;i<cantidadRegistros;i++) {
+			
+			if(nombres[i] != null) {
+			System.out.println((i) + "-->" + nombres[i]);
+		} else {
+			System.out.println((i) + "-->");
+			
+		}
 		}
 	}
 

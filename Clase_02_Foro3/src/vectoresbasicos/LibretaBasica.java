@@ -53,7 +53,7 @@ public class LibretaBasica {
 			
 				if(nombres[i].equals(nombreaeliminar)) {
 				
-					nombres[i] = "Nombre Eliminado";
+					nombres[i] = null;
 			}
 		}	
 	
@@ -71,7 +71,7 @@ public class LibretaBasica {
 				if(j1 == posicionaeliminar) {
 					
 					//y si es igual no la imprime
-						nombres[j1] = "Posición eliminada";
+						nombres[j1] = null;
 					
 				}
 			}		
@@ -80,10 +80,14 @@ public class LibretaBasica {
 	}
 	public void listarLibreta() {
 
-		for(int i=0;i<nombres.length;i++) {
-							
-			System.out.println("Vector " + i + " se ubica en la posición " + (i+1) + "-->" + nombres[i]);
+		for(int i=1;i<nombres.length;i++) {
 			
+			if(nombres[i] != null) {
+				System.out.println((i) + "-->" + nombres[i]);
+			} else {
+				System.out.println((i) + "-->");
+				
+			}
 		}
 		
 		System.out.println("......................................................................");

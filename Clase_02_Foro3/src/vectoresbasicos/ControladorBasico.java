@@ -11,26 +11,26 @@ public class ControladorBasico {
 		
 		LibretaBasica miLibreta = new LibretaBasica();
 		
-		/*miLibreta.agregarAlibreta("Enzo", 3);
-		miLibreta.listarLibreta();
+		miLibreta.agregarAlibreta("Enzo", 3);
+		//miLibreta.listarLibreta();
 		miLibreta.agregarAlibreta("Jerónimo", 5);
-		miLibreta.listarLibreta();
+		//miLibreta.listarLibreta();
 		miLibreta.agregarAlibreta("Marcela", 8);
-		miLibreta.listarLibreta();
+		//miLibreta.listarLibreta();
 		miLibreta.agregarAlibreta("Patricia", 1);
-		miLibreta.listarLibreta();
+		//miLibreta.listarLibreta();
 		miLibreta.agregarAlibreta("Ignacio", 0);
-		miLibreta.listarLibreta();
+		//miLibreta.listarLibreta();
 		miLibreta.agregarAlibreta("Cristian",6);
-		miLibreta.listarLibreta();
+		//miLibreta.listarLibreta();
 		miLibreta.agregarAlibreta("Francisco", 2);
-		miLibreta.listarLibreta();
+		//miLibreta.listarLibreta();
 		miLibreta.agregarAlibreta("Cata", 9);
-		miLibreta.listarLibreta();
+		//miLibreta.listarLibreta();
 		miLibreta.agregarAlibreta("Luli", 4);
-		miLibreta.listarLibreta();
+		//miLibreta.listarLibreta();
 		miLibreta.agregarAlibreta("Elisa", 7);
-		miLibreta.listarLibreta();*/
+		//miLibreta.listarLibreta();
 		
 		int opciones;
 		
@@ -57,9 +57,10 @@ public class ControladorBasico {
 				System.out.println("Escriba la posición donde quiere guardar el nombre: ");
 				int posicionnueva = Leer.nextInt();
 				
-				miLibreta.corroborarNombre(nombrenuevo);				
-				miLibreta.agregarAlibreta(nombrenuevo, posicionnueva);
-				
+				boolean bandera = miLibreta.corroborarNombre(nombrenuevo);
+				if (! bandera) {
+					miLibreta.agregarAlibreta(nombrenuevo, posicionnueva);
+				}				
 				miLibreta.listarLibreta();					
 			}
 			
