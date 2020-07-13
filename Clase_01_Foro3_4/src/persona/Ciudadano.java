@@ -45,7 +45,7 @@ public class Ciudadano extends Persona {
 		Ciudadano alumno1 = new Ciudadano("Facundo", "Mayorga", "Mendoza", 24460919);
 		Ciudadano alumno2 = new Ciudadano("Armando", "Bardo", "Lavaie", 45678934);
 		Ciudadano alumno3 = new Ciudadano("Esteban", "Quito", "San Luis", 35735918);
-		Ciudadano alumno4 = new Ciudadano("Elena", "Nito", "Cordoooooba", 40256341);	
+		Ciudadano alumno4 = new Ciudadano("Elena", "Nito", "Cordoooooba", 42256341);	
 		Ciudadano alumno5 = new Ciudadano("Lola", "Mento", "Santa Rosa", 44710739);
 		
 		System.out.println(alumno1);
