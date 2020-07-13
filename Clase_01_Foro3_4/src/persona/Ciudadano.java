@@ -11,6 +11,8 @@ public class Ciudadano extends Persona {
 		this.provincia = provincia;
 		this.dni = dni;
 	}
+	
+	
 	//Metodo get
 	public String getProvincia() {
 		//nos devuelve la variable provincia
@@ -32,5 +34,31 @@ public class Ciudadano extends Persona {
 		this.dni = dni;
 		
 	}
+	
+	public String toString() {		
+		return super.toString(getNombre(), getApellido()) +" Provincia: " +provincia+ " DNI: " +dni;				
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Ciudadano alumno1 = new Ciudadano("Facundo", "Mayorga", "Mendoza", 24460919);
+		Ciudadano alumno2 = new Ciudadano("Armando", "Bardo", "Lavaie", 45678934);
+		Ciudadano alumno3 = new Ciudadano("Esteban", "Quito", "San Luis", 35735918);
+		Ciudadano alumno4 = new Ciudadano("Elena", "Nito", "Cordoooooba", 40256341);	
+		Ciudadano alumno5 = new Ciudadano("Lola", "Mento", "Santa Rosa", 44710739);
+		
+		System.out.println(alumno1);
+		System.out.println("-------------------------------------------------------------------");
+		System.out.println(alumno2);
+		System.out.println("-------------------------------------------------------------------");
+		System.out.println(alumno3);
+		System.out.println("-------------------------------------------------------------------");
+		System.out.println(alumno4);
+		System.out.println("-------------------------------------------------------------------");
+		System.out.println(alumno5);
+		System.out.println("-------------------------------------------------------------------");
+	}
 }
+
 

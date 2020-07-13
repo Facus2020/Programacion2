@@ -12,6 +12,11 @@ public class Persona {
 			this.apellido = apellido;
 
 		}
+				
+		public String toString(String nombre, String apellido) {
+			
+			return ("Nombre: " + nombre+ " Apellido: " +apellido);
+		}
 	
 		//Metodo get
 		public String getNombre() {
